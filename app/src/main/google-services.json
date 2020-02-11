@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1087284499700",
+    "firebase_url": "https://cards-7f9f8.firebaseio.com",
+    "project_id": "cards-7f9f8",
+    "storage_bucket": "cards-7f9f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087284499700:android:cca009874dd31a99d0faa1",
+        "android_client_info": {
+          "package_name": "com.codesroots.mac.cards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1087284499700-g8jab6g6ma5rbpduk1m206gat5kgfgqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoL1hSa5CgqmQIaXEYrsgLznffLhdYqGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1087284499700-g8jab6g6ma5rbpduk1m206gat5kgfgqc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
