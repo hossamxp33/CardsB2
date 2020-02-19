@@ -33,11 +33,8 @@ import com.iposprinter.iposprinterservice.IPosPrinterCallback;
 import com.iposprinter.iposprinterservice.IPosPrinterService;
 
 import java.io.*;
-import java.net.URLEncoder;
 import java.util.Random;
 
-import static com.codesroots.mac.cards.presentaion.MemInfo.bitmapRecycle;
-import static com.codesroots.mac.cards.presentaion.Utils.PrintContentsExamples.*;
 
 public class IPosPrinterTestDemo {
 
@@ -370,52 +367,52 @@ public class IPosPrinterTestDemo {
      */
     public void printText(Buypackge value, Bitmap bitmaps,Bitmap notes) {
         if (mIPosPrinterService != null )
-        if (getPrinterStatus() == PRINTER_NORMAL)
-        ThreadPoolManager.getInstance().executeTask(new Runnable() {
-            @Override
-            public void run() {
-                BitmapFactory.Options options = new BitmapFactory.Options();
+            if (getPrinterStatus() == PRINTER_NORMAL)
+                ThreadPoolManager.getInstance().executeTask(new Runnable() {
+                    @Override
+                    public void run() {
+                        BitmapFactory.Options options = new BitmapFactory.Options();
 
-                Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.logo, options);
+                        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.logo, options);
 
-                try {
+                        try {
 
-                    if (!value.getPencode().isEmpty()) {
-                        for (Integer i = 0; i < value.getPencode().size(); i++) {
+                            if (!value.getPencode().isEmpty()) {
+                                for (Integer i = 0; i < value.getPencode().size(); i++) {
 
 
-                            mIPosPrinterService.printBitmap(1, 12, bitmaps, callback);
-                            mIPosPrinterService.printBlankLines(1, 8, callback);
-                            mIPosPrinterService.PrintSpecFormatText(value.getPrice()+"\n", "ST", 48, 1, callback);
-                            mIPosPrinterService.PrintSpecFormatText("PIN\n", "ST", 48, 1, callback);
+                                    mIPosPrinterService.printBitmap(1, 12, bitmaps, callback);
+                                    mIPosPrinterService.printBlankLines(1, 8, callback);
+                                    mIPosPrinterService.PrintSpecFormatText(value.getPrice()+"\n", "ST", 48, 1, callback);
+                                    mIPosPrinterService.PrintSpecFormatText("PIN\n", "ST", 48, 1, callback);
 
-                            mIPosPrinterService.PrintSpecFormatText(value.getPencode().get(i).getPencode()+"\n", "ST", 32, 1, callback);
-                            mIPosPrinterService.printBlankLines(1, 8, callback);
-                            mIPosPrinterService.printBitmap(1, 8, notes, callback);
-                            mIPosPrinterService.printBlankLines(1, 8, callback);
-                            mIPosPrinterService.printSpecifiedTypeText("SERIAL :" + value.getPencode().get(i).getSerial()+"\n", "ST", 32, callback);
-                            mIPosPrinterService.printBlankLines(1, 8, callback);
-                            mIPosPrinterService.printSpecifiedTypeText("EXPIRY : 20-10-2019\n", "ST", 32, callback);
-                            mIPosPrinterService.printSpecifiedTypeText("Merchant :" + value.getSalor()+"\n", "ST", 32, callback);
+                                    mIPosPrinterService.PrintSpecFormatText(value.getPencode().get(i).getPencode()+"\n", "ST", 32, 1, callback);
+                                    mIPosPrinterService.printBlankLines(1, 8, callback);
+                                    mIPosPrinterService.printBitmap(1, 8, notes, callback);
+                                    mIPosPrinterService.printBlankLines(1, 8, callback);
+                                    mIPosPrinterService.printSpecifiedTypeText("SERIAL :" + value.getPencode().get(i).getSerial()+"\n", "ST", 32, callback);
+                                    mIPosPrinterService.printBlankLines(1, 8, callback);
+                                    mIPosPrinterService.printSpecifiedTypeText("EXPIRY : 20-10-2019\n", "ST", 32, callback);
+                                    mIPosPrinterService.printSpecifiedTypeText("Merchant :" + value.getSalor()+"\n", "ST", 32, callback);
 
-                            mIPosPrinterService.printBlankLines(1, 8, callback);
-                            mIPosPrinterService.PrintSpecFormatText("Date & Time\n", "ST", 32,1, callback);
-                            mIPosPrinterService.printBlankLines(1, 16, callback);
-                            mIPosPrinterService.printBlankLines(1, 16, callback);
-                            mIPosPrinterService.PrintSpecFormatText(value.getTime()+"\n", "ST", 32, 1, callback);
-                            mIPosPrinterService.printSpecifiedTypeText("********************************", "ST", 24, callback);
-                            mIPosPrinterService.printBitmap(1, 6, bitmap, callback);
-                            mIPosPrinterService.printBlankLines(1, 16, callback);
+                                    mIPosPrinterService.printBlankLines(1, 8, callback);
+                                    mIPosPrinterService.PrintSpecFormatText("Date & Time\n", "ST", 32,1, callback);
+                                    mIPosPrinterService.printBlankLines(1, 16, callback);
+                                    mIPosPrinterService.printBlankLines(1, 16, callback);
+                                    mIPosPrinterService.PrintSpecFormatText(value.getTime()+"\n", "ST", 32, 1, callback);
+                                    mIPosPrinterService.printSpecifiedTypeText("********************************", "ST", 24, callback);
+                                    mIPosPrinterService.printBitmap(1, 6, bitmap, callback);
+                                    mIPosPrinterService.printBlankLines(1, 16, callback);
 
-                         //   bitmapRecycle(bitmap);
-                            mIPosPrinterService.printerPerformPrint(160, callback);
+                                    //   bitmapRecycle(bitmap);
+                                    mIPosPrinterService.printerPerformPrint(160, callback);
+                                }
+                            }
+                        } catch (RemoteException e) {
+                            e.printStackTrace();
                         }
                     }
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+                });
     }
 
     /**

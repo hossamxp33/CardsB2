@@ -15,9 +15,10 @@
         <variable
                 name="data"
                 type="com.codesroots.mac.cards.models.ReportDaily"/>
+
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
-
+            android:onClick="@{() -> listener.ShowReport(Context,data.opno)}"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
             android:background="@color/white"
@@ -58,6 +59,7 @@
                   android:layout_height="wrap_content"
                   app:layout_constraintEnd_toStartOf="@+id/name" android:layout_marginRight="32dp"
                   android:layout_marginEnd="32dp"/>
+
         <androidx.appcompat.widget.AppCompatImageView android:layout_width="50dp" android:layout_height="50dp"
                                                       app:srcCompat="@drawable/icons8print100"
                                                       tools:srcComact="@drawable/icons8print100"
@@ -68,6 +70,16 @@
                                                       android:layout_marginLeft="32dp"
                                                       android:onClick="@{() -> listener.PrintReport(Context,data.opno)}"
                                                       android:layout_marginStart="32dp"/>
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/appCompatImageView"-->
+<!--                android:layout_width="75dp"-->
+<!--                android:layout_height="75dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                app:imageResource="@{data.cardname != `` &amp;&amp;  data.cardname != null ? `images/`+data.logo : `1` }"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/time"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

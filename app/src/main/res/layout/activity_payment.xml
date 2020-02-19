@@ -82,7 +82,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/fatoravalue"
-                        android:text="@{ Buy.opno }"
+                        android:text="@{ Buy.opno.toString() }"
 
                         app:layout_constraintTop_toTopOf="@+id/textView6"
                         app:layout_constraintEnd_toStartOf="@+id/textView6"
@@ -161,8 +161,10 @@
                         android:text="@{Buy.device }"
                         app:layout_constraintTop_toTopOf="@+id/textView10"
                         app:layout_constraintEnd_toStartOf="@+id/textView10"
-                        android:textColor="#000" android:textSize="18sp" android:layout_marginRight="8dp"
+                        android:textColor="#000" android:textSize="18sp"
+                        android:layout_marginRight="8dp"
                         android:layout_marginEnd="8dp"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
         <androidx.constraintlayout.widget.Guideline
