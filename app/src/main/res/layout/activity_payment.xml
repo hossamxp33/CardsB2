@@ -7,7 +7,7 @@
     <data>
         <variable
                 name="Buy"
-                type="com.codesroots.mac.cards.models.Buypackge"/>
+                type="com.codesroots.mac.cardss.models.Buypackge"/>
 
 
     </data>

@@ -8,13 +8,13 @@
 
         <variable
                 name="Context"
-                type="com.codesroots.mac.cards.presentaion.MainActivity"/>
+                type="com.codesroots.mac.cardss.presentaion.MainActivity"/>
         <variable
                 name="listener"
-                type="com.codesroots.mac.cards.presentaion.ClickHandler"/>
+                type="com.codesroots.mac.cardss.presentaion.ClickHandler"/>
         <variable
                 name="data"
-                type="com.codesroots.mac.cards.models.PartnersModel"/>
+                type="com.codesroots.mac.cardss.models.PartnersModel"/>
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_marginTop="25dp"

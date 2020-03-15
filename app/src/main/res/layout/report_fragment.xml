@@ -7,10 +7,10 @@
     <data>
         <variable
                 name="LocationUseCase"
-                type="com.codesroots.mac.cards.models.MyLocationUseCase"/>
+                type="com.codesroots.mac.cardss.models.MyLocationUseCase"/>
         <variable
                 name="ViewModel"
-                type="com.codesroots.mac.cards.presentaion.mainfragment.viewmodel.MainViewModel"/>
+                type="com.codesroots.mac.cardss.presentaion.mainfragment.viewmodel.MainViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

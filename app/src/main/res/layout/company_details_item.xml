@@ -8,16 +8,16 @@
 
         <variable
             name="Context"
-            type="com.codesroots.mac.cards.presentaion.MainActivity"/>
+            type="com.codesroots.mac.cardss.presentaion.MainActivity"/>
         <variable
                 name="viewmodel"
-                type="com.codesroots.mac.cards.presentaion.mainfragment.viewmodel.MainViewModel"/>
+                type="com.codesroots.mac.cardss.presentaion.mainfragment.viewmodel.MainViewModel"/>
         <variable
                 name="listener"
-                type="com.codesroots.mac.cards.presentaion.ClickHandler"/>
+                type="com.codesroots.mac.cardss.presentaion.ClickHandler"/>
         <variable
                 name="data"
-                type="com.codesroots.mac.cards.models.CompanyDatum"/>
+                type="com.codesroots.mac.cardss.models.CompanyDatum"/>
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_marginTop="25dp"

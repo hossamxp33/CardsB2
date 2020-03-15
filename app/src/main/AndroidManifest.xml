@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
           tools:ignore="GoogleAppIndexingWarning"
-          package="com.codesroots.mac.cards">
+          package="com.codesroots.mac.cardss">
 
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <application
@@ -12,13 +12,13 @@
             android:supportsRtl="true"
             android:usesCleartextTraffic="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".presentaion.MainActivity">
+        <activity android:name="com.codesroots.mac.cardss.presentaion.MainActivity">
 
         </activity>
-        <activity android:name=".presentaion.payment.Payment"  >
+        <activity android:name="com.codesroots.mac.cardss.presentaion.payment.Payment"  >
 
         </activity>
-        <activity android:name=".presentaion.login.LoginActivity">
+        <activity android:name="com.codesroots.mac.cardss.presentaion.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

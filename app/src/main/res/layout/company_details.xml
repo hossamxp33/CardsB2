@@ -7,10 +7,10 @@
     <data>
         <variable
                 name="MyBalance"
-                type="com.codesroots.mac.cards.models.MyBalance"/>
+                type="com.codesroots.mac.cardss.models.MyBalance"/>
         <variable
                 name="ViewModel"
-                type="com.codesroots.mac.cards.presentaion.mainfragment.viewmodel.MainViewModel"/>
+                type="com.codesroots.mac.cardss.presentaion.mainfragment.viewmodel.MainViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
