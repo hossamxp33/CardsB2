@@ -37,6 +37,9 @@ class Payment : AppCompatActivity() {
                 secret.text.toString()
 
 
+                fatoravalue.append(it.serial)
+                fatoravalue.append("\n")
+                fatoravalue.text.toString()
 
             }
 
