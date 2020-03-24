@@ -89,9 +89,7 @@ class ReportsFragment  : Fragment() {
                     value.text = it.get(it.size - 2).amount
                     println(it.get(it.size - 2).amount)
                     commision.text = it.last().amount
-
                     MainAdapter.notifyDataSetChanged()
-
                 })
 
             }, year, month, day)
